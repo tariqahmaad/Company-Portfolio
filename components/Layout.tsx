@@ -16,9 +16,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [i18n.language]);
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col bg-background-dark text-white font-display">
+    <div className="relative flex min-h-screen w-full flex-col bg-background-dark text-white font-display overflow-x-hidden">
       <Header />
-      <main className="flex-grow flex flex-col">
+      <main className="flex-grow flex flex-col overflow-x-hidden min-h-0">
         {children}
       </main>
       <Footer />

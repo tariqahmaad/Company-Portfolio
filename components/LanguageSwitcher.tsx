@@ -2,12 +2,20 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
-const LanguageSwitcher: React.FC = () => {
+interface LanguageSwitcherProps {
+  onLanguageChange?: () => void;
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onLanguageChange }) => {
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    document.dir = lng === 'fa' ? 'rtl' : 'ltr';
+    // Delay language change slightly so animation completes first
+    setTimeout(() => {
+      i18n.changeLanguage(lng);
+      document.dir = lng === 'fa' ? 'rtl' : 'ltr';
+      onLanguageChange?.();
+    }, 150);
   };
 
   const languages = [
@@ -29,7 +37,8 @@ const LanguageSwitcher: React.FC = () => {
             <motion.div
               layoutId="activeLanguage"
               className="absolute inset-0 bg-primary rounded"
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              transition={{ type: "spring", stiffness: 700, damping: 40, duration: 0.15 }}
+              initial={false}
               style={{ zIndex: -1 }}
             />
           )}

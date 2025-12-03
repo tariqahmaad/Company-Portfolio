@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-1 flex-col gap-12 mt-12 pb-20 px-4 md:px-20 lg:px-40">
+    <div className="flex flex-1 flex-col gap-12 mt-12 pb-20 px-4 md:px-20 lg:px-40 overflow-x-hidden max-w-full w-full">
       <div className="flex flex-col items-center text-center gap-4">
         <FadeIn direction="down">
           <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl text-white">

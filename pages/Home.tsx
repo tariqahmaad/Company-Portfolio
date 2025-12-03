@@ -3,14 +3,28 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { IMAGES } from '../constants';
 import FadeIn from '../components/animations/FadeIn';
+import AnimatedArrow from '../components/animations/AnimatedArrow';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  const [hasScrolled, setHasScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full max-w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-80px)] min-h-[600px] w-full overflow-hidden">
+      <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             alt="Global network connections"
@@ -42,18 +56,30 @@ const Home: React.FC = () => {
               </div>
             </FadeIn>
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-            <FadeIn delay={0.8} direction="up">
-              <button className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:scale-105 transition-transform">
-                <span className="material-symbols-outlined text-4xl text-white">play_arrow</span>
-              </button>
-            </FadeIn>
-          </div>
+          <AnimatePresence>
+            {!hasScrolled && (
+              <div className="absolute bottom-10 left-0 right-0 flex justify-center pointer-events-none">
+                <motion.div
+                  key="scroll-arrow"
+                  className="pointer-events-auto"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20, transition: { duration: 0.5, ease: "easeInOut" } }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <AnimatedArrow
+                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                    ariaLabel={t('home.hero.scroll_down')}
+                  />
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
       {/* Core Services Summary */}
-      <section className="py-16 sm:py-24">
+      <section id="services" className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <FadeIn direction="up">

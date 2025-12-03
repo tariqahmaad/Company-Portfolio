@@ -7,8 +7,13 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-16 md:gap-24 mt-8 pb-20">
+    <div className="flex flex-col gap-16 md:gap-24 mt-8 pb-20 overflow-x-hidden max-w-full w-full">
       <div className="flex flex-col gap-8 text-center items-center px-4">
+        <FadeIn direction="down">
+          <div className="bg-white p-6 rounded-2xl mb-8 w-fit mx-auto shadow-lg">
+            <img src="/TALC-Logo.png" alt="TALC Logo" className="h-40 md:h-80 w-auto object-contain" />
+          </div>
+        </FadeIn>
         <FadeIn direction="down">
           <div className="flex flex-col gap-2">
             <p className="text-primary text-sm font-bold">{t('about.journey.label')}</p>

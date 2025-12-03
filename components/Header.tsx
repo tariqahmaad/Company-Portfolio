@@ -6,11 +6,24 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isLandingPage = location.pathname === '/';
+  const isTransparent = isLandingPage && !isScrolled;
 
   const getNavClass = (path: string, isMobile: boolean = false) => {
     const isActive = location.pathname === path;
@@ -22,12 +35,20 @@ const Header: React.FC = () => {
     }
 
     return `text-sm font-medium leading-normal transition-colors ${
-      isActive ? 'text-primary font-bold' : 'text-white/60 hover:text-white'
+      isActive ? 'text-primary font-bold' : isTransparent ? 'text-white/80 hover:text-white' : 'text-white/60 hover:text-white'
     }`;
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-sm border-b border-border-dark">
+    <header 
+      className={`top-0 z-50 w-full transition-all duration-300 ${
+        isLandingPage ? 'fixed' : 'sticky'
+      } ${
+        isTransparent 
+          ? 'bg-transparent border-transparent' 
+          : 'bg-background-dark/80 backdrop-blur-sm border-b border-border-dark'
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" onClick={closeMobileMenu}>
@@ -73,7 +94,7 @@ const Header: React.FC = () => {
             
             <div className="py-2 flex items-center justify-between border-t border-border-dark mt-2 pt-4">
               <span className="text-slate-400 text-sm">Language</span>
-              <LanguageSwitcher />
+              <LanguageSwitcher onLanguageChange={closeMobileMenu} />
             </div>
 
             <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] flex">

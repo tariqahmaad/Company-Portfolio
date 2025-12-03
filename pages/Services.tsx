@@ -34,7 +34,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-10 md:px-20 lg:px-40">
+    <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-10 md:px-20 lg:px-40 overflow-x-hidden">
       <div className="mx-auto mb-16 max-w-3xl text-center">
         <FadeIn direction="down">
           <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl md:text-6xl text-white">

@@ -8,7 +8,7 @@ export const IMAGES = {
   ABOUT_HERO: "/images/about_hero.png",
   TEAM_CEO: "/President.jpeg",
   TEAM_COO: "/Vice-President.jpeg",
-  TEAM_CTO: "/images/about_hero.png", // Placeholder
-  JOIN_JOURNEY: "/images/service_warehousing.png", // Placeholder due to rate limit
-  CONTACT_MAP: "/images/home_map.png" // Placeholder
+  TEAM_CTO: "/images/team_cto.png",
+  JOIN_JOURNEY: "/images/join_journey.png",
+  CONTACT_MAP: "/images/contact_map.png"
 };
