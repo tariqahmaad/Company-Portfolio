@@ -1,0 +1,162 @@
+{
+  "brand": {
+    "name": "Tawhid Almas Logistic Company"
+  },
+  "welcome": "Welcome to Tawhid Almas Logistics",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "quote": "Get a Quote"
+  },
+  "home": {
+    "hero": {
+      "title": "Pioneering Logistics for a Connected World",
+      "subtitle": "We engineer innovative, data-driven supply chain solutions that transcend borders and accelerate global commerce. Your vision, delivered.",
+      "explore": "Explore Our Journey",
+      "contact": "Contact Our Experts"
+    },
+    "services": {
+      "title": "Our Core Services",
+      "subtitle": "Delivering excellence across the entire logistics spectrum.",
+      "air": {
+        "title": "Air Freight",
+        "desc": "Expedited and reliable air cargo solutions connecting global markets with speed and precision."
+      },
+      "ocean": {
+        "title": "Ocean Freight",
+        "desc": "Cost-effective and comprehensive sea freight services for containerized and bulk shipments."
+      },
+      "ground": {
+        "title": "Ground Transport",
+        "desc": "Integrated road and rail networks providing seamless last-mile and continental distribution."
+      }
+    },
+    "innovation": {
+      "title": "Innovating the Future of Logistics",
+      "desc": "We're not just moving goods; we're advancing the industry. Our commitment to technology and sustainability drives efficiency and creates value for our partners worldwide.",
+      "points": [
+        "Real-time tracking and predictive analytics for full supply chain visibility.",
+        "Eco-friendly solutions and carbon footprint reduction strategies.",
+        "Automated warehousing and smart inventory management systems."
+      ]
+    }
+  },
+  "footer": {
+    "company_name": "Tawhid Almas Logistic Company",
+    "tagline": "Connecting your world.",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "services": "Services",
+    "air": "Air Freight",
+    "ocean": "Ocean Freight",
+    "ground": "Ground Transport",
+    "warehousing": "Warehousing",
+    "resources": "Resources",
+    "blog": "Blog",
+    "case_studies": "Case Studies",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 Tawhid Almas Logistic Company. All rights reserved."
+  },
+  "about": {
+    "journey": {
+      "label": "OUR JOURNEY",
+      "title": "Connecting Worlds, Building Futures",
+      "desc": "From a visionary startup to a global logistics powerhouse, our story is one of ambition, innovation, and an unwavering commitment to our clients. We don't just move cargo; we build the arteries of global trade, empowering businesses to reach new horizons."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To provide intelligent, reliable, and innovative logistics solutions that drive success for our partners, creating seamless global connections with unparalleled efficiency and a commitment to sustainability."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To be the world's most trusted logistics partner, pioneering the future of supply chain management through technology, data, and a relentless focus on customer-centricity and operational excellence."
+    },
+    "values": {
+      "title": "Our Values",
+      "desc": "Integrity, Innovation, Collaboration, and Excellence are the cornerstones of our operations. They guide every decision we make and every package we deliver, ensuring we build lasting, trust-based relationships."
+    },
+    "leadership": {
+      "label": "LEADERSHIP",
+      "title": "The Architects of Our Success",
+      "president": "President",
+      "vp": "Vice President",
+      "names": {
+        "ahmad": "Said Ahmad",
+        "jaffar": "Said Jaffar"
+      }
+    },
+    "join": {
+      "title": "Join Our Journey",
+      "desc": "We are always looking for passionate, talented individuals to join our global team. If you're driven by challenges and inspired by innovation, we want to hear from you. Explore our open positions and help us shape the future of logistics.",
+      "button": "View Careers"
+    }
+  },
+  "services": {
+    "title": "Comprehensive Logistic Solutions",
+    "subtitle": "From ocean freight to last-mile delivery, we orchestrate seamless supply chains. Discover how our specialized services can empower your business to thrive in a connected world.",
+    "ocean": {
+      "title": "Ocean Freight",
+      "desc": "Global reach with reliable sea transport. We handle everything from full container loads to complex consolidations, ensuring your cargo crosses oceans safely and on schedule."
+    },
+    "air": {
+      "title": "Air Freight",
+      "desc": "When speed is critical, our air freight solutions deliver. We leverage a vast network of carriers to provide fast, secure, and cost-effective transport for your most urgent shipments."
+    },
+    "ground": {
+      "title": "Ground Transport",
+      "desc": "Connecting the dots on land. Our extensive ground network provides flexible and reliable FTL, LTL, and last-mile delivery services tailored to your regional needs."
+    },
+    "warehousing": {
+      "title": "Warehousing & Fulfillment",
+      "desc": "Optimize your inventory with our state-of-the-art facilities. We offer secure storage, efficient order fulfillment, and value-added services to streamline your supply chain."
+    },
+    "cta": {
+      "title": "Ready to Optimize Your Supply Chain?",
+      "desc": "Let's discuss your unique logistical challenges. Our experts are here to build a tailored solution that drives efficiency and growth for your business.",
+      "button": "Request a Consultation",
+      "learn_more": "Learn More"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question, a project, or just want to connect? We're here to help. Reach out to us, and let's start a conversation about your logistics needs.",
+    "details": {
+      "title": "Contact Details",
+      "jalalabad": {
+        "title": "Jalalabad Office",
+        "address": "Joey Haft St#2 office 37 Avenue 5\nJalalabad City, Nangarhar, Afghanistan"
+      },
+      "kabul": {
+        "title": "Kabul Office",
+        "address": "Qalay Fatihullah St#2 office #8\nKabul City, Afghanistan"
+      },
+      "mobile": "Mobile:",
+      "email": "Email:"
+    },
+    "map": "Find Us On The Map",
+    "form": {
+      "title": "Send Us a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Submit Message",
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "subject": "Inquiry about freight services",
+        "message": "Please describe your logistics needs..."
+      }
+    }
+  }
+}
